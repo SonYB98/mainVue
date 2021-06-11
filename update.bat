@@ -1,3 +1,3 @@
 git add --all
 git commit -m "new tag commit test"
-git push -u origin mastergitv 
+git push -u syb master
