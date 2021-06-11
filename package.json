@@ -1,0 +1,36 @@
+{
+  "name": "tailwind-dashboard",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "cross-env NODE_ENV=production vite build"
+  },
+  "dependencies": {
+    "@fawmi/vue-google-maps": "^0.7.12",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.0",
+    "@tailwindcss/ui": "^0.7.2",
+    "firebase": "^8.6.3",
+    "google-maps": "^4.3.3",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
+    "vue": "^3.0.11",
+    "vue-cli": "^2.9.6",
+    "vue-router": "^4.0.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@vue/compiler-sfc": "^3.0.11",
+    "autoprefixer": "^9.8.6",
+    "cross-env": "^7.0.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "postcss": "^7.0.35",
+    "vite": "^1.0.0-rc.8"
+  },
+  "description": "Dashboard starter template built with Vite, Vue 3, Tailwind CSS and TypeScript.",
+  "main": "postcss.config.js",
+  "author": "",
+  "license": "ISC"
+}
