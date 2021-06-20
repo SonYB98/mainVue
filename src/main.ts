@@ -7,8 +7,6 @@ import DashboardLayout from './components/DashboardLayout.vue';
 import EmptyLayout from './components/EmptyLayout.vue';
 
 
-
-
 const app = createApp(App);
 
 app.component('default-layout', DashboardLayout);

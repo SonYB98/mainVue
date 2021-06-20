@@ -19,13 +19,18 @@
         </div>
       </div>
     </div>
+
+    <div class = "row">
+      <div class = "map_sw">
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import { Loader } from "google-maps";
 const loader = new Loader("AIzaSyDDXDdoYwn-bRRX0LseKP0C0EpRnIxa0M4");
 import Firebase from "firebase";
-// firebase init - add your own config here
+
 const firebaseConfig = {
   apiKey: "AIzaSyBEvDOks4bxG5eBoNHVttkhG4PewsrMVBs",
   authDomain: "lost-smart-teg.firebaseapp.com",
@@ -48,8 +53,6 @@ export default {
   },
   mounted() {
     loader.load().then(function (google) {
-      // Regular Map
-      // const myLatlng = new google.maps.LatLng(40.748817, -73.985428);
       const myLatlng = new google.maps.LatLng(
         37.28928696370265,
         127.2048022021344
@@ -57,8 +60,8 @@ export default {
       const mapOptions = {
         zoom: 15,
         center: myLatlng,
-        scrollwheel: false, // we disable de scroll over the map, it is a really annoing when you scroll through page
-        disableDefaultUI: true, // a way to quickly hide all controls
+        scrollwheel: false, 
+        disableDefaultUI: true, 
         zoomControl: true,
         styles: [
           {
