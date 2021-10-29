@@ -6,7 +6,7 @@
         <span class="text-gray-600 font-semibold text-2xl">회원가입</span>
       </div>
 
-      <form class="mt-4" @submit.prevent="login">
+      <form class="mt-4" @submit="signup">
         <label class="block">
           <span class="text-gray-700 text-sm">ID</span>
           <input
@@ -16,7 +16,7 @@
           />
         </label>
 
-        <label class="block mt-3">
+        <label class="block mt-1">
           <span class="text-gray-700 text-sm">Password</span>
           <input
             type="password"
@@ -24,6 +24,16 @@
             v-model="password"
           />
         </label>
+
+        <label class="block mt-2">
+          <span class="text-gray-700 text-sm">Name</span>
+          <input
+            type="text"
+            class="mt-1 block w-full rounded-md focus:border-indigo-600"
+            v-model="name"
+          />
+        </label>
+
 
         <div class="flex justify-between items-center mt-4">
 
@@ -52,9 +62,48 @@
 <script>
 import { defineComponent, ref } from "vue";
 import { useRouter } from "vue-router";
-// import firebase from 'firebase'
+import App from '../firebase'
+import Firebase from "firebase";
 
 export default defineComponent({
+  data() {
+    return {
+      email: "",
+      password: "",
+      name: ""
+    }
+  },
+  methods: {
+    signup: function(e) {
+      e.preventDefault()
+      if(this.email == "") {
+        alert("이메일을 입력해주세요.")
+        return
+      } else if(this.password == "") {
+        alert("비밀번호를 입력해주세요.")
+        return
+      } else if(this.name == "") {
+        alert("이름을 입력해주세요.")
+        return
+      }
+      Firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+        .then(() => {
+          Firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+          .then((userCredential) => {
+            App.database().ref("Users/"+userCredential.user.uid).set({
+              uid: userCredential.user.uid,
+              email: this.email,
+              name: this.name
+            })
+            this.$router.push("/dashboard");
+          })
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        });
+    }
+  },
   setup() {
     const router = useRouter();
     const email = ref("");
@@ -68,18 +117,6 @@ export default defineComponent({
       router.push("/");
     }
 
-/*
-  firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
-  function(user) {
-    alert('회원가입 성공')
-  },
-  function(err){
-    alert('에러 :' + err.message)
-  }
-);
-*/
-
-//this.$firebase로 접근
     return {
       login,
       Back,

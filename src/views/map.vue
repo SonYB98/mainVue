@@ -2,7 +2,7 @@
   <div class="container-fluid mt--7">
     <div class="row">
       <div class="col-lg-7 col-md-10">
-        <h1 class="text-gray-700 text-3xl font-medium">지도 마킹</h1>
+        <h1 class="text-gray-700 text-3xl font-medium">비콘 확인</h1>
       </div>
     </div>
 
@@ -27,24 +27,15 @@
   </div>
 </template>
 <script>
-import { Loader } from "google-maps";
-const loader = new Loader("AIzaSyDDXDdoYwn-bRRX0LseKP0C0EpRnIxa0M4");
-import Firebase from "firebase";
+import { Loader } from "@googlemaps/js-api-loader";
+import app from '../firebase'
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBEvDOks4bxG5eBoNHVttkhG4PewsrMVBs",
-  authDomain: "lost-smart-teg.firebaseapp.com",
-  databaseURL: "https://lostag.firebaseio.com",
-  projectId: "lost-smart-teg",
-  storageBucket: "lost-smart-teg.appspot.com",
-  messagingSenderId: "174840217",
-  appId: "1:174840217:web:a8cfab5d351ba625f21b08",
-  measurementId: "G-ZC75GTZLK4",
-};
-let app = Firebase.initializeApp(firebaseConfig);
-let db = app.database();
-let locationRef = db.ref("location");
-let map, marker;
+const loader = new Loader({
+  apiKey: "AIzaSyAunelJKCBtSwYnJ84H7LD7_WvCbmVcrEc",
+  version: "weekly"
+});
+const ref = app.database().ref("location");
+
 export default {
   data() {
     return {
@@ -52,7 +43,7 @@ export default {
     };
   },
   mounted() {
-    loader.load().then(function (google) {
+    loader.load().then(function () {
       const myLatlng = new google.maps.LatLng(
         37.28928696370265,
         127.2048022021344
@@ -106,18 +97,21 @@ export default {
           },
         ],
       };
-      map = new google.maps.Map(document.getElementById("map"), mapOptions);
-      locationRef.on("value", (snapshot) => {
-        let newMaker = { lat: snapshot.val().lat, lng: snapshot.val().lng };
-        console.log(newMaker.lat);
-        console.log(newMaker.lng);
-        if (marker != null) marker.setMap(null);
-        marker = new google.maps.Marker({
+      const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+      ref.once("value").then((snapshot) => {
+        // snapshot.forEach((childSnapshot) => {
+        //   let childKey = childSnapshot.key;
+        //   let childData = childSnapshot.val();
+        // })
+        const val = snapshot.val();
+        let newMaker = { lat: val.lat, lng: val.lng };
+        const marker = new google.maps.Marker({
           position: newMaker,
           title: "Lost Tag",
           icon: "https://cdn.glitch.com/37d9e42b-5b4d-4b17-9e77-c177a73cd5ec%2Fdasol.png?v=1621847826305",
+          map: map
         });
-        marker.setMap(map);
       });
     });
   },

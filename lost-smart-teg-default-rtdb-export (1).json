@@ -1,0 +1,168 @@
+{
+  "Users" : {
+    "2C6ofGGtgJZTVIk7PNuuvfJwr7Z2" : {
+      "email" : "a@naver.com",
+      "name" : "a",
+      "uid" : "2C6ofGGtgJZTVIk7PNuuvfJwr7Z2"
+    },
+    "5DweO9wO9IWQLugAsuwXHVLoGHK2" : {
+      "email" : "b@naver.com",
+      "name" : "가입",
+      "uid" : "5DweO9wO9IWQLugAsuwXHVLoGHK2"
+    },
+    "kEaTK9sOkDPSGsAA46lcXz34dg33" : {
+      "email" : "w@naver.com",
+      "name" : "김아무개",
+      "uid" : "kEaTK9sOkDPSGsAA46lcXz34dg33"
+    }
+  },
+  "board" : [ null, {
+    "email" : "1563186",
+    "userName" : "아아\t"
+  }, {
+    "email" : 123,
+    "userName" : "김소현"
+  } ],
+  "locations" : {
+    "-Mak7BnR6zYMqr8YAbCu" : {
+      "lat" : 36.331097301030965,
+      "lng" : 127.3393931328974,
+      "timestamp" : 1622157610442
+    },
+    "-Mak7Bv2AF5ZduFnVI1C" : {
+      "lat" : 37.29307473583823,
+      "lng" : 127.20514310985246,
+      "timestamp" : 1622157610929
+    },
+    "-Mak7DdxGZ8QBt-KazIw" : {
+      "lat" : 37.2927674647586,
+      "lng" : 127.2002507606093,
+      "timestamp" : 1622157618027
+    },
+    "-Mak7DlJ7JLXdz8bcrYR" : {
+      "lat" : 37.29338200566287,
+      "lng" : 127.20467104106584,
+      "timestamp" : 1622157618498
+    },
+    "-Mak7Ufq-qzpeHDc1Q55" : {
+      "lat" : 37.290275108517285,
+      "lng" : 127.2002507606093,
+      "timestamp" : 1622157688364
+    },
+    "-Mak7V9IVVCU8RER6X-e" : {
+      "lat" : 37.293518569626514,
+      "lng" : 127.2031690040175,
+      "timestamp" : 1622157689754
+    },
+    "-Mak7VLXxCR08ecEVkgz" : {
+      "lat" : 37.29228948502906,
+      "lng" : 127.19904913097062,
+      "timestamp" : 1622157690537
+    },
+    "-Mak7VUtpdpTGCnCSnU2" : {
+      "lat" : 37.29584011907893,
+      "lng" : 127.20604433208146,
+      "timestamp" : 1622157691137
+    },
+    "-Mak7VbdzGNzQpLKKPJv" : {
+      "lat" : 37.2916066515761,
+      "lng" : 127.20703138499894,
+      "timestamp" : 1622157691633
+    },
+    "-Mak7Vj7CVb3hCVaTu5p" : {
+      "lat" : 37.28880696962442,
+      "lng" : 127.20063699870744,
+      "timestamp" : 1622157692111
+    },
+    "-Mak7X0QmjFg2itmRbfF" : {
+      "lat" : 37.28826067807231,
+      "lng" : 127.20385564952531,
+      "timestamp" : 1622157697380
+    },
+    "-Mak7X8uvLMSuLTRkst3" : {
+      "lat" : 37.289114256879465,
+      "lng" : 127.19883455424943,
+      "timestamp" : 1622157697920
+    },
+    "-Mak7XMHQIMzhJBL2BCG" : {
+      "lat" : 37.29607909804356,
+      "lng" : 127.2046281257216,
+      "timestamp" : 1622157698777
+    },
+    "-Mak7XVQkK3QgLAn8hLk" : {
+      "lat" : 37.29713742433199,
+      "lng" : 127.20651640086808,
+      "timestamp" : 1622157699362
+    },
+    "-Mak7XcAbJk8f12qCTAk" : {
+      "lat" : 37.29471349373379,
+      "lng" : 127.20153822093644,
+      "timestamp" : 1622157699858
+    },
+    "-Mak7XjvDa0Zh7CfVy5D" : {
+      "lat" : 37.290377535743076,
+      "lng" : 127.20415605693498,
+      "timestamp" : 1622157700356
+    },
+    "-Mak7XpIl-bCfzq6xNL0" : {
+      "lat" : 37.289387400052625,
+      "lng" : 127.20535768657365,
+      "timestamp" : 1622157700699
+    },
+    "-MakABMGv0Y75XQ_DU2b" : {
+      "lat" : 37.29243287929283,
+      "lng" : 127.20587267070451,
+      "timestamp" : 1622158395077
+    },
+    "-MakABWlLtotQQUgnZRy" : {
+      "lat" : 37.28785778553748,
+      "lng" : 127.20402731090226,
+      "timestamp" : 1622158395748
+    },
+    "-MakABjMHfVOe8a6aCh5" : {
+      "lat" : 37.282898818340946,
+      "lng" : 127.22115928589086,
+      "timestamp" : 1622158396619
+    },
+    "-MakABu63fhV59JOJFbN" : {
+      "lat" : 37.28375245797112,
+      "lng" : 127.21630985199194,
+      "timestamp" : 1622158397306
+    },
+    "-MamOrbae_ja5pKC6Jn7" : {
+      "lat" : 37.29152840967354,
+      "lng" : 127.20487864509133,
+      "timestamp" : 1622195796647
+    },
+    "-MamOrkt1NyDYdQUehgc" : {
+      "lat" : 37.29431661085284,
+      "lng" : 127.20673339131545,
+      "timestamp" : 1622195797248
+    },
+    "-MamOrrPZwImDeDHSCPg" : {
+      "lat" : 37.290084480913606,
+      "lng" : 127.19775737950195,
+      "timestamp" : 1622195797684
+    },
+    "-MamOrwrIgOI6qkt-Cc6" : {
+      "lat" : 37.29027653233419,
+      "lng" : 127.20606954458427,
+      "timestamp" : 1622195798009
+    },
+    "-MamOs1R7_-HN5tpmzKn" : {
+      "lat" : 37.29537638513757,
+      "lng" : 127.2065805054016,
+      "timestamp" : 1622195798388
+    },
+    "-MamOtYTCFcvu5_ggnIB" : {
+      "lat" : 37.28928696370265,
+      "lng" : 127.2048022021344,
+      "timestamp" : 1622195804596
+    },
+    "Mak9Ddkew2ND1Eun8C" : {
+      "lat" : "37.29058525364734",
+      "lng" : "127.20514310985279",
+      "timestamp" : "162257663489"
+    }
+  }
+}

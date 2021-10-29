@@ -43,7 +43,8 @@
             </div>
 
             <div class="mx-5">
-              <h4 class="text-2xl font-semibold text-gray-700">4</h4>
+               
+              <h4 class="text-2xl font-semibold text-gray-700">1</h4>  
               <div class="text-gray-500">사용중인 회원</div>
             </div>
           </div>
@@ -76,7 +77,7 @@
             </div>
 
             <div class="mx-5">
-              <h4 class="text-2xl font-semibold text-gray-700">11</h4>
+              <h4 class="text-2xl font-semibold text-gray-700">4</h4>
               <div class="text-gray-500">사용중인 태그</div>
             </div>
           </div>
@@ -233,12 +234,12 @@ interface User {
 export default defineComponent({
   setup() {
     const testUser: User = {
-      name: "김아몰랑",
-      email: "123@123",
+      name: "김소현",
+      email: "aaa@aaa",
       title: "목걸이",
       title2: "Tag",
       status: "분실",
-      role: "대충 암거나 설명문",
+      role: "---",
     };
 
     const users = ref<User[]>([...Array(1).keys()].map(() => testUser));

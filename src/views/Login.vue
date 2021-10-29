@@ -6,7 +6,7 @@
         <span class="text-gray-600 font-semibold text-2xl">물품방지태그</span>
       </div>
 
-      <form class="mt-4" @submit.prevent="login">
+      <form class="mt-4" @submit="login">
         <label class="block">
           <span class="text-gray-700 text-sm">ID</span>
           <input
@@ -55,25 +55,36 @@
 <script>
 import { defineComponent, ref } from "vue";
 import { useRouter } from "vue-router";
+import Firebase from 'firebase'
 
 export default defineComponent({
+  data() {
+    return {
+      email: "",
+      password: ""
+    }
+  },
+  methods: {
+    login: function(e) {
+      e.preventDefault()
+      if(this.email == "") { 
+        alert("이메일을 입력하세요.")
+        return
+      } else if(this.password == "") {
+        alert("비밀번호를 입력하세요.")
+        return
+      } 
+      Firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+      .then((userCredential) => {
+        this.$router.push("/dashboard");
+      })
+      .catch(err => {
+        alert("로그인 실패")
+      })
+    }
+  },
   setup() {
     const router = useRouter();
-    const email = ref("a@naver.com");
-    const password = ref("12345");
-
-    function login() {
-      router.push("/dashboard");
-    }
-    function SignUp() {
-      router.push("/SignUp");
-    }
-    return {
-      login,
-      SignUp,
-      email,
-      password,
-    };
-  },
+  }
 });
 </script>
