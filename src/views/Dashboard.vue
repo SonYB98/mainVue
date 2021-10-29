@@ -77,7 +77,7 @@
             </div>
 
             <div class="mx-5">
-              <h4 class="text-2xl font-semibold text-gray-700">4</h4>
+              <h4 class="text-2xl font-semibold text-gray-700">1</h4>
               <div class="text-gray-500">사용중인 태그</div>
             </div>
           </div>
@@ -146,7 +146,7 @@
                 <th
                   class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
                 >
-                  ---
+                  비콘
                 </th>
                 <th class="px-6 py-3 border-b border-gray-200 bg-gray-50"></th>
               </tr>
@@ -239,7 +239,7 @@ export default defineComponent({
       title: "목걸이",
       title2: "Tag",
       status: "분실",
-      role: "---",
+      role: "DA:0B:88:20:7C:CF",
     };
 
     const users = ref<User[]>([...Array(1).keys()].map(() => testUser));

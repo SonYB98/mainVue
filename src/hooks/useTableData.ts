@@ -25,10 +25,10 @@ export interface IWideTableData {
 
 export function useTableData() {
   const simpleTableData = ref<ISimpleTableData[]>([
-    { city: 'Mak7BnR6zYMqr8YAbCu', totalOrders: '36.331097301030965 , 127.3393931328974' },
-    { city: 'Mak7Bv2AF5ZduFnVI1C', totalOrders: '37.29307473583823 , 127.20514310985246' },
-    { city: 'Mak7DdxGZ8QBt-KazIw', totalOrders: '37.2927674647586 , 127.2002507606093 ' },
-    { city: 'Mak7DlJ7JLXdz8bcrYR', totalOrders: '37.29338200566287 , 127.20467104106584' },
+    { city: '"DA:0B:88:20:7C:CF"', totalOrders: '36.4287351 , 127.3912949' },
+    { city: '---', totalOrders: '--- , ---' },
+    { city: '---', totalOrders: '--- , --- ' },
+    { city: '---', totalOrders: '--- , ---' },
   ]);
 
   const paginatedTableData = ref<IPaginatedTableData[]>([
@@ -50,7 +50,7 @@ export function useTableData() {
       title: '목걸이',
       title2: 'Tag',
       status: 'Check',
-      role: '<-분실일경우 빨간색',
+      role: '"DA:0B:88:20:7C:CF"',
     }))
   );
 

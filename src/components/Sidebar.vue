@@ -36,7 +36,7 @@
           to="/tables"
         >
           
-          <span class="mx-4">Tables(임시)</span>
+          <span class="mx-4">Tables</span>
         </router-link>
 
         <router-link
@@ -45,7 +45,7 @@
           to="/forms"
         >
          
-          <span class="mx-4">Member</span>
+          <span class="mx-4">Beacon Search</span>
         </router-link>
 
         <router-link
@@ -62,7 +62,7 @@
           to="/modal"
         >
          
-          <span class="mx-4">정리용</span>
+          <span class="mx-4">게시판</span>
         </router-link>
 
         <router-link

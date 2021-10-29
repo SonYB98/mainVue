@@ -45,8 +45,8 @@ export default {
   mounted() {
     loader.load().then(function () {
       const myLatlng = new google.maps.LatLng(
-        37.28928696370265,
-        127.2048022021344
+        36.4287668,
+        127.3913109
       );
       const mapOptions = {
         zoom: 15,
